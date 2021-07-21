@@ -50,16 +50,26 @@ const catBreeds = [{
 ]
 
 // 1. Log de naam van het laatste kattenras.
-console.log('naam derde kattenras:', catBreeds[2].name)
+console.log('naam derde kattenras:', catBreeds[2].name);
 
 // 2. Log de energy levels van de eerste kat.
-console.log('energieniveau eerste kattenras:', catBreeds[0].energy_level)
+console.log('energieniveau eerste kattenras:', catBreeds[0].energy_level);
 
 // 3. Log het eerste temperament van de temperamenten van de tweede kat.
-console.log('eerste temperament tweede kattenras:', catBreeds[1].temperament[0])
+console.log('eerste temperament tweede kattenras:', catBreeds[1].temperament[0]);
 
 // 4. Log het laatst temperament van de temperamenten van de derde kat.
-console.log('laatste temperament derde kattenras:', catBreeds[2].temperament[4])
+console.log('laatste temperament derde kattenras:', catBreeds[2].temperament[4]);
+
+// 4. nog een alternatieve oplossing, zonder het directe index nummer te gebruiken
+console.log('laatste temperament 3e kattenras:', catBreeds[2].temperament[catBreeds[2].temperament.length - 1]);
 
 // 5. Log het favoriete voedsel van de derde kat.
-console.log('favoriete voedsel derde kattenras:', catBreeds[2].food.favourite_food)
+console.log('favoriete voedsel derde kattenras:', catBreeds[2].food.favourite_food);
+
+// oplossing WINC Academy voor #4
+const lengthTemperamentsCatThree = catBreeds[2].temperament.length;
+console.log(
+    "Laatste temperament kat 3:",
+    catBreeds[2].temperament[lengthTemperamentsCatThree - 1]
+);
